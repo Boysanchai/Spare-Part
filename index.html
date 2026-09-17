@@ -840,7 +840,6 @@
       border-radius: 8px;
       padding: 8px 12px;
     }
-
   </style>
 </head>
 
@@ -977,11 +976,16 @@
                 <table style="width:100%;border-collapse:collapse;font-size:13px;">
                   <thead>
                     <tr style="border-bottom:2px solid #dc3545;">
-                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">CODE</th>
-                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">NAME</th>
-                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">SPEC</th>
-                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">BALANCE</th>
-                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">MIN</th>
+                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">CODE
+                      </th>
+                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">NAME
+                      </th>
+                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">SPEC
+                      </th>
+                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">BALANCE
+                      </th>
+                      <th style="text-align:left;padding:8px 12px;font-size:11px;color:#8896a9;font-weight:600;">MIN
+                      </th>
                     </tr>
                   </thead>
                   <tbody id="lsItems"></tbody>
@@ -1314,7 +1318,8 @@
 
             <div class="space-y-3">
               <div>
-                <label class="text-xs" style="color:#8896a9;">Item Code <span style="color:#dc3545;">*<p style="font-size: 1px;">(ใช้ SP ตัวใหญ่เท่านั้น)</p></span></label>
+                <label class="text-xs" style="color:#8896a9;">Item Code <span style="color:#dc3545;">*<p
+                      style="font-size: 1px;">(ใช้ SP ตัวใหญ่เท่านั้น)</p></span></label>
                 <input type="text" id="new_itemCode" class="input" placeholder="เช่น SP-001">
               </div>
               <div>
@@ -1325,10 +1330,10 @@
                 <label class="text-xs" style="color:#8896a9;">Spec</label>
                 <input type="text" id="new_itemSpec" class="input" placeholder="เช่น 2RS, 1 inch">
               </div>
-                <div>
-                  <label class="text-xs" style="color:#8896a9;">Received (จำนวนรับเข้า)</label>
-                  <input type="number" id="new_itemReceived" class="input" min="0" value="0" placeholder="เช่น 10">
-                </div>
+              <div>
+                <label class="text-xs" style="color:#8896a9;">Received (จำนวนรับเข้า)</label>
+                <input type="number" id="new_itemReceived" class="input" min="0" value="0" placeholder="เช่น 10">
+              </div>
             </div>
 
             <div class="flex gap-3 mt-5">
@@ -1449,11 +1454,13 @@
           </div>
           <div>
             <label class="text-xs" style="color:transparent;display:block;">‎</label>
-            <button onclick="generate()" id="btn" class="w-full rounded text-sm font-semibold transition relative overflow-hidden"
+            <button onclick="generate()" id="btn"
+              class="w-full rounded text-sm font-semibold transition relative overflow-hidden"
               style="background:linear-gradient(135deg,#c9a84c,#f0d080);color:#0f1b2d;height:36px;box-sizing:border-box;display:block;margin-top:2px;">
               <span id="btnLabel">Export</span>
               <div id="btnProgress"
-                style="position:absolute;bottom:0;left:0;height:3px;width:0%;background:#0f1b2d;transition:width 0.3s ease;"></div>
+                style="position:absolute;bottom:0;left:0;height:3px;width:0%;background:#0f1b2d;transition:width 0.3s ease;">
+              </div>
             </button>
           </div>
         </div>
@@ -1665,17 +1672,20 @@
       <div class="bg-white border rounded-lg p-6" style="border-color:#dde2ea;">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label class="text-xs" style="color:#8896a9;">Employee ID <span style="color:red; font-size:15px;">*</span></label>
+            <label class="text-xs" style="color:#8896a9;">Employee ID <span
+                style="color:red; font-size:15px;">*</span></label>
             <input type="text" id="empId" oninput="fetchEmpName()" class="input">
           </div>
           <div>
-            <label class="text-xs" style="color:#8896a9;">Employee Name <span style="color:red; font-size:15px;">*</span></label>
+            <label class="text-xs" style="color:#8896a9;">Employee Name <span
+                style="color:red; font-size:15px;">*</span></label>
             <input type="text" id="empName" class="input" style="background:#f8f9fb;" readonly>
           </div>
 
           <!-- Item Code + QR -->
           <div>
-            <label class="text-xs" style="color:#8896a9;">Item Code <span style="color:red; font-size:15px;">*</span></label>
+            <label class="text-xs" style="color:#8896a9;">Item Code <span
+                style="color:red; font-size:15px;">*</span></label>
             <div class="input-qr-row">
               <input type="text" id="itemCode" oninput="searchItemClient('code')" class="input">
               <!-- สำหรับ Requisition -->
@@ -1698,7 +1708,8 @@
           </div>
 
           <div>
-            <label class="text-xs" style="color:#8896a9;">Item Name <span style="color:red; font-size:15px;">*</span></label>
+            <label class="text-xs" style="color:#8896a9;">Item Name <span
+                style="color:red; font-size:15px;">*</span></label>
             <input type="text" id="itemName" oninput="searchItemClient('name')" class="input">
           </div>
           <div>
@@ -1706,7 +1717,8 @@
             <select id="spec" class="input" style="background:#f8f9fb;"></select>
           </div>
           <div>
-            <label class="text-xs" style="color:#8896a9;">Quantity <span style="color:red; font-size:15px;">*</span></label>
+            <label class="text-xs" style="color:#8896a9;">Quantity <span
+                style="color:red; font-size:15px;">*</span></label>
             <input type="number" id="qty" class="input">
           </div>
           <div>
@@ -1729,7 +1741,8 @@
             style="background:linear-gradient(135deg,#c9a84c,#f0d080);color:#0f1b2d;">
             <span id="saveBtnLabel">Confirm</span>
             <div id="saveBtnProgress"
-              style="position:absolute;bottom:0;left:0;height:3px;width:0%;background:#0f1b2d;transition:width 0.3s ease;"></div>
+              style="position:absolute;bottom:0;left:0;height:3px;width:0%;background:#0f1b2d;transition:width 0.3s ease;">
+            </div>
           </button>
         </div>
       </div>
@@ -2067,7 +2080,7 @@
                   style="font-size:11px;color:#8896a9;font-weight:600;text-transform:uppercase;">Emp</th>
                 <th class="text-left py-2 px-3"
                   style="font-size:11px;color:#8896a9;font-weight:600;text-transform:uppercase;">Item</th>
-                  <th class="text-left py-2 px-3"
+                <th class="text-left py-2 px-3"
                   style="font-size:11px;color:#8896a9;font-weight:600;text-transform:uppercase;">Spec</th>
                 <th class="text-left py-2 px-3"
                   style="font-size:11px;color:#8896a9;font-weight:600;text-transform:uppercase;">Qty</th>
@@ -2241,7 +2254,8 @@
             </div>
         </div-->
             <div>
-              <label class="text-xs" style="color:#8896a9;">Tool Name <span style="color: #dc3545; font-size:15px;">*</span></label>
+              <label class="text-xs" style="color:#8896a9;">Tool Name <span
+                  style="color: #dc3545; font-size:15px;">*</span></label>
               <input type="text" id="tool_itemName" oninput="searchToolItem()" class="input"
                 placeholder="พิมพ์ชื่อเครื่องมือ">
             </div>
@@ -2250,7 +2264,8 @@
               <select id="tool_spec" class="input" style="background:#f8f9fb;"></select>
             </div>
             <div>
-              <label class="text-xs" style="color:#8896a9;">Qty <span style="color: #dc3545; font-size:15px;">*</span></label>
+              <label class="text-xs" style="color:#8896a9;">Qty <span
+                  style="color: #dc3545; font-size:15px;">*</span></label>
               <input type="number" id="tool_qty" min="1" value="1" class="input">
             </div>
             <div>
@@ -2258,7 +2273,8 @@
               <input type="text" id="tool_borrower" class="input" readonly style="background:#f8f9fb;">
             </div>
             <div>
-              <label class="text-xs" style="color:#8896a9;">Purpose <span style="color: #dc3545; font-size:15px;">*</span></label>
+              <label class="text-xs" style="color:#8896a9;">Purpose <span
+                  style="color: #dc3545; font-size:15px;">*</span></label>
               <input type="text" id="tool_remark" class="input" placeholder="ระบุหมายเหตุ">
             </div>
           </div>
@@ -2408,7 +2424,7 @@
             lucide.createIcons();
 
             if ('BarcodeDetector' in window) {
-              try { _detector = new BarcodeDetector({ formats: ['qr_code'] }); } catch (e) { }
+              try {_detector = new BarcodeDetector({formats: ['qr_code']});} catch (e) { }
             }
             await _startCam();
           };
@@ -2424,15 +2440,15 @@
 
             // ลอง 3 constraint ตามลำดับ
             const tries = [
-              { video: { facingMode: { exact: _facing }, width: { ideal: 1280 }, height: { ideal: 720 } }, audio: false },
-              { video: { facingMode: _facing }, audio: false },
-              { video: true, audio: false }
+              {video: {facingMode: {exact: _facing}, width: {ideal: 1280}, height: {ideal: 720}}, audio: false},
+              {video: {facingMode: _facing}, audio: false},
+              {video: true, audio: false}
             ];
 
             let stream = null, lastErr = null;
             for (const c of tries) {
-              try { stream = await navigator.mediaDevices.getUserMedia(c); break; }
-              catch (e) { lastErr = e; }
+              try {stream = await navigator.mediaDevices.getUserMedia(c); break;}
+              catch (e) {lastErr = e;}
             }
 
             if (!stream) {
@@ -2456,7 +2472,7 @@
             vid.srcObject = stream;
             vid.setAttribute('playsinline', '');
             vid.muted = true;
-            try { await vid.play(); } catch (e) { }
+            try {await vid.play();} catch (e) { }
 
             _setStatus('ชี้กล้องที่ QR Code', '');
             _tick();
@@ -2469,15 +2485,15 @@
             if (vid.readyState < 2 || vid.videoWidth === 0) {
               _raf = requestAnimationFrame(_tick); return;
             }
-            if (_locked) { _raf = requestAnimationFrame(_tick); return; }
+            if (_locked) {_raf = requestAnimationFrame(_tick); return;}
 
             if (_detector) {
               _detector.detect(vid)
                 .then(codes => {
-                  if (codes.length) { _found(codes[0].rawValue); return; }
+                  if (codes.length) {_found(codes[0].rawValue); return;}
                   _raf = requestAnimationFrame(_tick);
                 })
-                .catch(() => { _raf = requestAnimationFrame(_tick); });
+                .catch(() => {_raf = requestAnimationFrame(_tick);});
               return;
             }
 
@@ -2488,8 +2504,8 @@
             ctx.drawImage(vid, 0, 0);
             try {
               const d = ctx.getImageData(0, 0, c.width, c.height);
-              const r = jsQR(d.data, d.width, d.height, { inversionAttempts: 'attemptBoth' });
-              if (r?.data) { _found(r.data); return; }
+              const r = jsQR(d.data, d.width, d.height, {inversionAttempts: 'attemptBoth'});
+              if (r?.data) {_found(r.data); return;}
             } catch (e) { }
             _raf = requestAnimationFrame(_tick);
           }
@@ -2531,7 +2547,7 @@
           // ---------- stop ----------
           function _stop() {
             cancelAnimationFrame(_raf); _raf = null;
-            if (_stream) { _stream.getTracks().forEach(t => t.stop()); _stream = null; }
+            if (_stream) {_stream.getTracks().forEach(t => t.stop()); _stream = null;}
           }
 
           // ---------- switch camera ----------
@@ -2548,7 +2564,7 @@
             const track = _stream.getVideoTracks()[0];
             try {
               _torch = !_torch;
-              await track.applyConstraints({ advanced: [{ torch: _torch }] });
+              await track.applyConstraints({advanced: [{torch: _torch}]});
               document.getElementById('torchBtn').classList.toggle('on', _torch);
             } catch (e) {
               document.getElementById('torchBtn').style.display = 'none';
@@ -2565,7 +2581,7 @@
           };
 
           // ---------- manual ----------
-          function _showManual() { document.getElementById('qrManual').classList.add('show'); }
+          function _showManual() {document.getElementById('qrManual').classList.add('show');}
           window.submitManual = function () {
             const v = document.getElementById('qrManualVal').value.trim();
             if (v) _found(v);
@@ -2605,7 +2621,7 @@
           if (window.google && google.accounts) {
             google.accounts.id.renderButton(
               document.querySelector(".g_id_signin"),
-              { theme: "filled_black", size: "large", locale: "th", width: 280 }
+              {theme: "filled_black", size: "large", locale: "th", width: 280}
             );
           }
         }
@@ -2639,7 +2655,7 @@
           // ✅ ถ้ามีชื่อมาจาก QR ให้เติมและค้นหาทันที (ไม่รอ debounce)
           if (prefillItem) {
             document.getElementById("itemName").value = prefillItem;
-            gasCall("searchItem", { keyword: prefillItem }, function (data) {
+            gasCall("searchItem", {keyword: prefillItem}, function (data) {
               var list = data.items;
               if (!list || list.length === 0) return;
 
@@ -2653,7 +2669,7 @@
 
               var spec = document.getElementById("spec");
               spec.innerHTML = "";
-              list.filter(function (i) { return i.name === match.name; })
+              list.filter(function (i) {return i.name === match.name;})
                 .forEach(function (i) {
                   var opt = document.createElement("option");
                   opt.value = i.spec; opt.text = i.spec;
@@ -2721,7 +2737,7 @@
             remark: document.getElementById("in_remark").value.trim()
           };
           if (!data.itemCode || !data.qty || Number(data.qty) <= 0) {
-            showModal({ title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Item Code และ Quantity", type: "error" });
+            showModal({title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Item Code และ Quantity", type: "error"});
             return;
           }
           const btn = document.getElementById("saveInputBtn");
@@ -2729,14 +2745,14 @@
           google.script.run
             .withSuccessHandler((res) => {
               const now = new Date();
-              todayInputList.unshift({ ...data, time: res.time || now.toLocaleTimeString("th-TH"), date: res.date || now.toLocaleDateString("th-TH") });
+              todayInputList.unshift({...data, time: res.time || now.toLocaleTimeString("th-TH"), date: res.date || now.toLocaleDateString("th-TH")});
               renderInputTable();
               clearInputForm();
-              showModal({ title: "บันทึกสำเร็จ", text: `รับ ${data.itemName} เข้าคลัง ${data.qty} รายการแล้ว`, type: "success", autoClose: 1800 });
+              showModal({title: "บันทึกสำเร็จ", text: `รับ ${data.itemName} เข้าคลัง ${data.qty} รายการแล้ว`, type: "success", autoClose: 1800});
               btn.innerText = "บันทึกรับเข้า"; btn.disabled = false;
             })
             .withFailureHandler(err => {
-              showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+              showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
               btn.innerText = "บันทึกรับเข้า"; btn.disabled = false;
             })
             .saveStockIn(data);
@@ -2779,8 +2795,8 @@
           document.getElementById("d_time").innerText = lastSavedData.time;
           const statusEl = document.getElementById("d_status");
           let bg = "#effb8e", color = "#b45309";
-          if (lastSavedData.status === "อนุมัติแล้ว") { bg = "#e8f5ee"; color = "#198754"; }
-          else if (lastSavedData.status === "ไม่อนุมัติ") { bg = "#fdecea"; color = "#dc3545"; }
+          if (lastSavedData.status === "อนุมัติแล้ว") {bg = "#e8f5ee"; color = "#198754";}
+          else if (lastSavedData.status === "ไม่อนุมัติ") {bg = "#fdecea"; color = "#dc3545";}
           statusEl.innerHTML = `<span style="display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600;background:${bg};color:${color};">● ${lastSavedData.status}</span>`;
         }
 
@@ -2820,68 +2836,68 @@
         }
 
         function generate() {
-            var start = document.getElementById('start').value;
-            var end = document.getElementById('end').value;
-            var source = document.getElementById('sourceFilter').value;
-            if (!start || !end) { showModal({ title: "แจ้งเตือน", text: "กรุณาเลือกวันที่", type: "error" }); return; }
+          var start = document.getElementById('start').value;
+          var end = document.getElementById('end').value;
+          var source = document.getElementById('sourceFilter').value;
+          if (!start || !end) {showModal({title: "แจ้งเตือน", text: "กรุณาเลือกวันที่", type: "error"}); return;}
 
-            var btn = document.getElementById('btn');
-            var label = document.getElementById('btnLabel');
-            var progress = document.getElementById('btnProgress');
+          var btn = document.getElementById('btn');
+          var label = document.getElementById('btnLabel');
+          var progress = document.getElementById('btnProgress');
 
-            btn.disabled = true;
-            label.innerText = "Processing...";
-            progress.style.width = "0%";
+          btn.disabled = true;
+          label.innerText = "Processing...";
+          progress.style.width = "0%";
 
-            // ✅ animate progress วิ่งแบบ fake จนกว่าจะได้ผลลัพธ์
-            var pct = 0;
-            var progressTimer = setInterval(function () {
-              pct += (100 - pct) * 0.1; // ค่อยๆ ใกล้ 100% แต่ไม่ถึง
-              progress.style.width = Math.min(pct, 92) + "%";
-            }, 150);
+          // ✅ animate progress วิ่งแบบ fake จนกว่าจะได้ผลลัพธ์
+          var pct = 0;
+          var progressTimer = setInterval(function () {
+            pct += (100 - pct) * 0.1; // ค่อยๆ ใกล้ 100% แต่ไม่ถึง
+            progress.style.width = Math.min(pct, 92) + "%";
+          }, 150);
 
-            // ซ่อนก่อน
-            document.getElementById("summaryArea").classList.add("hidden");
-            document.getElementById("resultArea").classList.add("hidden");
+          // ซ่อนก่อน
+          document.getElementById("summaryArea").classList.add("hidden");
+          document.getElementById("resultArea").classList.add("hidden");
 
-            gasCall("getReportData", { startDate: start, endDate: end, sourceFilter: source }, function (data) {
-              currentData = data;
+          gasCall("getReportData", {startDate: start, endDate: end, sourceFilter: source}, function (data) {
+            currentData = data;
 
-              // ✅ จบ progress ให้เต็ม 100% แล้วค่อยรีเซ็ตปุ่ม
-              clearInterval(progressTimer);
-              progress.style.width = "100%";
-              setTimeout(function () {
-                progress.style.width = "0%";
-                label.innerText = "Generate";
-                btn.disabled = false;
-              }, 300);
+            // ✅ จบ progress ให้เต็ม 100% แล้วค่อยรีเซ็ตปุ่ม
+            clearInterval(progressTimer);
+            progress.style.width = "100%";
+            setTimeout(function () {
+              progress.style.width = "0%";
+              label.innerText = "Generate";
+              btn.disabled = false;
+            }, 300);
 
-              if (!data.rows || data.rows.length === 0) {
-                showModal({ title: "ไม่พบข้อมูล", text: "ไม่มีข้อมูลในช่วงวันที่เลือก", type: "error" }); return;
-              }
+            if (!data.rows || data.rows.length === 0) {
+              showModal({title: "ไม่พบข้อมูล", text: "ไม่มีข้อมูลในช่วงวันที่เลือก", type: "error"}); return;
+            }
 
-              // ✅ คำนวณ Summary
-              var totalIn = 0, totalOut = 0;
-              data.rows.forEach(function (row) {
-                var qty = Number(row[3]) || 0;
-                if (row[4] === "IN") totalIn += qty;
-                if (row[4] === "OUT") totalOut += qty;
-              });
-              var balance = totalIn - totalOut;
+            // ✅ คำนวณ Summary
+            var totalIn = 0, totalOut = 0;
+            data.rows.forEach(function (row) {
+              var qty = Number(row[3]) || 0;
+              if (row[4] === "IN") totalIn += qty;
+              if (row[4] === "OUT") totalOut += qty;
+            });
+            var balance = totalIn - totalOut;
 
-              // ✅ แสดง Summary
-              document.getElementById("summaryArea").classList.remove("hidden");
-              document.getElementById("sumIn").innerText = totalIn.toLocaleString();
-              document.getElementById("sumOut").innerText = totalOut.toLocaleString();
-              document.getElementById("sumBalance").innerText = balance.toLocaleString();
-              document.getElementById("sumBalance").style.color = balance >= 0 ? "#198754" : "#dc3545";
+            // ✅ แสดง Summary
+            document.getElementById("summaryArea").classList.remove("hidden");
+            document.getElementById("sumIn").innerText = totalIn.toLocaleString();
+            document.getElementById("sumOut").innerText = totalOut.toLocaleString();
+            document.getElementById("sumBalance").innerText = balance.toLocaleString();
+            document.getElementById("sumBalance").style.color = balance >= 0 ? "#198754" : "#dc3545";
 
-              // ✅ วาด Donut
+            // ✅ วาด Donut
+            requestAnimationFrame(function () {
               requestAnimationFrame(function () {
-                requestAnimationFrame(function () {
-                  drawDonut(totalIn, totalOut);
-                });
+                drawDonut(totalIn, totalOut);
               });
+            });
 
             // ตาราง
             document.getElementById("count").innerText = data.rows.length;
@@ -2905,13 +2921,13 @@
             document.getElementById('resultArea').classList.remove('hidden');
 
           }, function (err) {
-              clearInterval(progressTimer);
-              progress.style.width = "0%";
-              label.innerText = "Generate";
-              btn.disabled = false;
-              showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
-            });
-          }
+            clearInterval(progressTimer);
+            progress.style.width = "0%";
+            label.innerText = "Generate";
+            btn.disabled = false;
+            showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
+          });
+        }
         function drawDonut(totalIn, totalOut) {
           var canvas = document.getElementById("donutChart");
           if (!canvas) return;
@@ -2924,8 +2940,8 @@
 
           var cx = w / 2, cy = h / 2, r = 58, inner = 36;
           var slices = [
-            { value: totalIn, color1: "#1db954", color2: "#0a7a32" },
-            { value: totalOut, color1: "#ff4d6d", color2: "#9b1a2a" }
+            {value: totalIn, color1: "#1db954", color2: "#0a7a32"},
+            {value: totalOut, color1: "#ff4d6d", color2: "#9b1a2a"}
           ];
 
           var angle = -Math.PI / 2;
@@ -3052,38 +3068,38 @@
 
           // ===== คอลัมน์ =====
           ws.columns = [
-            { key: "a", width: 20 },
-            { key: "b", width: 28 },
-            { key: "c", width: 22 },
-            { key: "d", width: 10 },
-            { key: "e", width: 10 },
-            { key: "f", width: 15 }
+            {key: "a", width: 20},
+            {key: "b", width: 28},
+            {key: "c", width: 22},
+            {key: "d", width: 10},
+            {key: "e", width: 10},
+            {key: "f", width: 15}
           ];
 
           // ===== หัวเรื่อง =====
           ws.mergeCells("A1:F1");
           var titleRow = ws.getRow(1);
           titleRow.getCell(1).value = "📦 STOCK REPORT SUMMARY";
-          titleRow.getCell(1).font = { bold: true, size: 14, color: { argb: "FFF0D080" } };
-          titleRow.getCell(1).fill = { type: "pattern", pattern: "solid", fgColor: { argb: "FF0F1B2D" } };
-          titleRow.getCell(1).alignment = { vertical: "middle", horizontal: "center" };
+          titleRow.getCell(1).font = {bold: true, size: 14, color: {argb: "FFF0D080"}};
+          titleRow.getCell(1).fill = {type: "pattern", pattern: "solid", fgColor: {argb: "FF0F1B2D"}};
+          titleRow.getCell(1).alignment = {vertical: "middle", horizontal: "center"};
           titleRow.height = 32;
 
           ws.addRow([]); // เว้นบรรทัด
 
           // ===== Summary =====
           var summaryData = [
-            { label: "Stock IN", value: sumIn, argbBg: "FFE8F5EE", argbFont: "FF198754" },
-            { label: "Stock OUT", value: sumOut, argbBg: "FFFDECEA", argbFont: "FFDC3545" },
-            { label: "Balance", value: sumBalance, argbBg: "FFFFFDF0", argbFont: "FFC9A84C" }
+            {label: "Stock IN", value: sumIn, argbBg: "FFE8F5EE", argbFont: "FF198754"},
+            {label: "Stock OUT", value: sumOut, argbBg: "FFFDECEA", argbFont: "FFDC3545"},
+            {label: "Balance", value: sumBalance, argbBg: "FFFFFDF0", argbFont: "FFC9A84C"}
           ];
 
           summaryData.forEach(function (s) {
             var row = ws.addRow([s.label, s.value]);
             [1, 2].forEach(function (col) {
-              row.getCell(col).font = { bold: true, size: 12, color: { argb: s.argbFont } };
-              row.getCell(col).fill = { type: "pattern", pattern: "solid", fgColor: { argb: s.argbBg } };
-              row.getCell(col).alignment = { vertical: "middle" };
+              row.getCell(col).font = {bold: true, size: 12, color: {argb: s.argbFont}};
+              row.getCell(col).fill = {type: "pattern", pattern: "solid", fgColor: {argb: s.argbBg}};
+              row.getCell(col).alignment = {vertical: "middle"};
             });
             row.height = 24;
           });
@@ -3094,11 +3110,11 @@
           // ===== Header ตาราง =====
           var headerRow = ws.addRow(currentData.header);
           headerRow.eachCell(function (cell) {
-            cell.font = { bold: true, color: { argb: "FFFFFFFF" }, size: 11 };
-            cell.fill = { type: "pattern", pattern: "solid", fgColor: { argb: "FF1A2332" } };
-            cell.alignment = { vertical: "middle", horizontal: "center" };
+            cell.font = {bold: true, color: {argb: "FFFFFFFF"}, size: 11};
+            cell.fill = {type: "pattern", pattern: "solid", fgColor: {argb: "FF1A2332"}};
+            cell.alignment = {vertical: "middle", horizontal: "center"};
             cell.border = {
-              bottom: { style: "medium", color: { argb: "FFC9A84C" } }
+              bottom: {style: "medium", color: {argb: "FFC9A84C"}}
             };
           });
           headerRow.height = 26;
@@ -3108,20 +3124,20 @@
             var bgArgb = idx % 2 === 0 ? "FFFFFFFF" : "FFF8F9FB";
             var exRow = ws.addRow(row);
             exRow.eachCell(function (cell, colNum) {
-              cell.fill = { type: "pattern", pattern: "solid", fgColor: { argb: bgArgb } };
-              cell.alignment = { vertical: "middle" };
+              cell.fill = {type: "pattern", pattern: "solid", fgColor: {argb: bgArgb}};
+              cell.alignment = {vertical: "middle"};
               cell.border = {
-                bottom: { style: "thin", color: { argb: "FFEEF0F3" } }
+                bottom: {style: "thin", color: {argb: "FFEEF0F3"}}
               };
               // คอลัมน์ TYPE (col 5)
               if (colNum === 5) {
                 var isIn = cell.value === "IN";
-                cell.font = { bold: true, color: { argb: isIn ? "FF198754" : "FFDC3545" } };
+                cell.font = {bold: true, color: {argb: isIn ? "FF198754" : "FFDC3545"}};
                 cell.fill = {
                   type: "pattern", pattern: "solid",
-                  fgColor: { argb: isIn ? "FFE8F5EE" : "FFFDECEA" }
+                  fgColor: {argb: isIn ? "FFE8F5EE" : "FFFDECEA"}
                 };
-                cell.alignment = { horizontal: "center", vertical: "middle" };
+                cell.alignment = {horizontal: "center", vertical: "middle"};
               }
             });
             exRow.height = 22;
@@ -3129,7 +3145,7 @@
 
           // ===== Download =====
           const buffer = await wb.xlsx.writeBuffer();
-          const blob = new Blob([buffer], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
+          const blob = new Blob([buffer], {type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
           const url = URL.createObjectURL(blob);
           const a = document.createElement("a");
           a.href = url;
@@ -3143,7 +3159,7 @@
           clearTimeout(timer);
           timer = setTimeout(() => {
             const empId = document.getElementById("empId").value.trim();
-            if (!empId) { document.getElementById("empName").value = ""; return; }
+            if (!empId) {document.getElementById("empName").value = ""; return;}
             google.script.run.withSuccessHandler(name => {
               document.getElementById("empName").value = name || "";
             }).getEmployeeName(empId);
@@ -3278,7 +3294,7 @@
             document.getElementById("approveCard").style.display = "block";
           }
 
-            // ✅ ลิสต์คนที่เห็นการ์ด Spare Part Input (แยกต่างหาก)
+          // ✅ ลิสต์คนที่เห็นการ์ด Spare Part Input (แยกต่างหาก)
           const INPUT_WHITELIST = [
             "pmnstore48@gmail.com", "jattaphol.c@minebea.co.th", "prapatsorn.n@minebea.co.th",
             "naruemon.s@minebea.co.th", "wasana.ku@minebea.co.th",
@@ -3316,7 +3332,7 @@
 
         function checkEmailAlertAccess(email) {
           if (!email) return;
-          gasCall("isDeveloper", { email: email }, function (res) {
+          gasCall("isDeveloper", {email: email}, function (res) {
             if (res && res.isDev) {
               var btn = document.getElementById("emailAlertBtn");
               if (btn) btn.style.display = "flex";
@@ -3324,7 +3340,7 @@
           }, null);
         }
 
-      function saveData() {
+        function saveData() {
           const data = {
             empId: document.getElementById('empId').value.trim(),
             empName: document.getElementById('empName').value.trim(),
@@ -3336,7 +3352,7 @@
             remark: document.getElementById('remark').value.trim()
           };
           if (!data.empId || !data.itemCode || !data.qty) {
-            showModal({ title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Employee ID, Item Code และ Quantity", type: "error" });
+            showModal({title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Employee ID, Item Code และ Quantity", type: "error"});
             return;
           }
           const now = new Date();
@@ -3353,7 +3369,7 @@
               btn.innerText = "Save Transaction"; btn.disabled = false;
             })
             .withFailureHandler(err => {
-              showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+              showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
               btn.innerText = "Save Transaction"; btn.disabled = false;
             })
             .saveStock(data);
@@ -3374,19 +3390,19 @@
         }
 
         // ================= APPROVE =================
-        function stopAutoRefresh() { clearInterval(autoRefreshTimer); }
-        function startAutoRefresh() { autoRefreshTimer = setInterval(loadPending, 5000); }
+        function stopAutoRefresh() {clearInterval(autoRefreshTimer);}
+        function startAutoRefresh() {autoRefreshTimer = setInterval(loadPending, 5000);}
 
         function loadPending() {
           gasCall("getPendingList", {}, function (res) {
             if (!res.success) {
-              showModal({ title: "เกิดข้อผิดพลาด", text: res.message, type: "error" });
+              showModal({title: "เกิดข้อผิดพลาด", text: res.message, type: "error"});
               return;
             }
             pendingData = res.rows;
             renderTable();
           }, function (err) {
-            showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+            showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
           });
         }
 
@@ -3403,11 +3419,11 @@
           });
           document.getElementById("countBadge").innerText = filtered.length + " รายการ";
           const tbody = document.getElementById("approveTable");
-          if (filtered.length === 0) { tbody.innerHTML = "<tr><td colspan='7'>ไม่มีข้อมูล</td></tr>"; return; }
+          if (filtered.length === 0) {tbody.innerHTML = "<tr><td colspan='7'>ไม่มีข้อมูล</td></tr>"; return;}
           tbody.innerHTML = filtered.map(r => {
             let bg = "#fff3cd", color = "#856404";
-            if (r.status === "อนุมัติแล้ว") { bg = "#d1e7dd"; color = "#0f5132"; }
-            if (r.status.includes("ไม่อนุมัติ")) { bg = "#f8d7da"; color = "#842029"; }
+            if (r.status === "อนุมัติแล้ว") {bg = "#d1e7dd"; color = "#0f5132";}
+            if (r.status.includes("ไม่อนุมัติ")) {bg = "#f8d7da"; color = "#842029";}
             return `
     <tr style="border-top:1px solid #eee;">
       <td>${r.id}</td><td>${r.empName}</td><td>${r.itemName}</td><td>${r.spec}</td><td>${r.qty}</td><td>${r.date}</td>
@@ -3420,7 +3436,7 @@
           }).join("");
         }
 
-        document.addEventListener("input", e => { if (e.target.id === "searchBox") renderTable(); });
+        document.addEventListener("input", e => {if (e.target.id === "searchBox") renderTable();});
 
         function approve(id) {
           showModal({
@@ -3429,15 +3445,15 @@
               closeModal();
               var email = localStorage.getItem("pmn_user_email") || "";
               setTimeout(function () {
-                gasCall("approveTransaction", { txId: id, approverEmail: email }, function (res) {
+                gasCall("approveTransaction", {txId: id, approverEmail: email}, function (res) {
                   if (res.success === false) {
-                    showModal({ title: "ไม่มีสิทธิ์", text: res.message, type: "error" });
+                    showModal({title: "ไม่มีสิทธิ์", text: res.message, type: "error"});
                     return;
                   }
-                  showModal({ title: "อนุมัติสำเร็จ", text: "รายการได้รับการอนุมัติเรียบร้อยแล้ว", type: "success", autoClose: 1500 });
+                  showModal({title: "อนุมัติสำเร็จ", text: "รายการได้รับการอนุมัติเรียบร้อยแล้ว", type: "success", autoClose: 1500});
                   loadPending();
                 }, function (err) {
-                  showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+                  showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
                 });
               }, 0);
             }
@@ -3451,15 +3467,15 @@
               closeModal();
               var email = localStorage.getItem("pmn_user_email") || "";
               setTimeout(function () {
-                gasCall("rejectTransaction", { txId: id, reason: reason, approverEmail: email }, function (res) {
+                gasCall("rejectTransaction", {txId: id, reason: reason, approverEmail: email}, function (res) {
                   if (res.success === false) {
-                    showModal({ title: "ไม่มีสิทธิ์", text: res.message, type: "error" });
+                    showModal({title: "ไม่มีสิทธิ์", text: res.message, type: "error"});
                     return;
                   }
-                  showModal({ title: "ไม่อนุมัติสำเร็จ", text: "รายการถูกปฏิเสธเรียบร้อยแล้ว", type: "error", autoClose: 1500 });
+                  showModal({title: "ไม่อนุมัติสำเร็จ", text: "รายการถูกปฏิเสธเรียบร้อยแล้ว", type: "error", autoClose: 1500});
                   loadPending();
                 }, function (err) {
-                  showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+                  showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
                 });
               }, 0);
             }
@@ -3467,7 +3483,7 @@
         }
 
         // ================= MODAL =================
-        function showModal({ title = "", text = "", type = "info", showInput = false, onConfirm = null, autoClose = 0 }) {
+        function showModal({title = "", text = "", type = "info", showInput = false, onConfirm = null, autoClose = 0}) {
           const modal = document.getElementById("globalModal");
           modal.classList.remove("hidden", "closing");
           document.getElementById("modalTitle").innerText = title;
@@ -3477,10 +3493,10 @@
           const input = document.getElementById("modalInput");
           input.classList.toggle("hidden", !showInput);
           input.value = "";
-          if (type === "success") { icon.style.background = "#e8f5ee"; icon.style.color = "#198754"; icon.innerText = "✓"; }
-          else if (type === "error") { icon.style.background = "#fdecea"; icon.style.color = "#dc3545"; icon.innerText = "✖"; }
-          else if (type === "confirm") { icon.style.background = "#fff3cd"; icon.style.color = "#856404"; icon.innerText = "?"; }
-          else { icon.style.background = "#eef2ff"; icon.style.color = "#1a2332"; icon.innerText = "!"; }
+          if (type === "success") {icon.style.background = "#e8f5ee"; icon.style.color = "#198754"; icon.innerText = "✓";}
+          else if (type === "error") {icon.style.background = "#fdecea"; icon.style.color = "#dc3545"; icon.innerText = "✖";}
+          else if (type === "confirm") {icon.style.background = "#fff3cd"; icon.style.color = "#856404"; icon.innerText = "?";}
+          else {icon.style.background = "#eef2ff"; icon.style.color = "#1a2332"; icon.innerText = "!";}
           if ((type === "success" || type === "error") && autoClose > 0) {
             actions.innerHTML = `<div class="text-xs text-gray-400 mt-4">ปิดอัตโนมัติ...</div>`;
             setTimeout(() => closeModal(), autoClose);
@@ -3500,7 +3516,7 @@
           const modal = document.getElementById("globalModal");
           modal.classList.add("closing");
           modal.classList.remove("show");
-          setTimeout(() => { modal.classList.add("hidden"); modal.classList.remove("closing"); }, 320);
+          setTimeout(() => {modal.classList.add("hidden"); modal.classList.remove("closing");}, 320);
         }
 
         // ================= ADD NEW ITEM =================
@@ -3512,7 +3528,7 @@
           var modal = document.getElementById("addItemModal");
           modal.style.display = "flex";
           lucide.createIcons();
-          setTimeout(function () { document.getElementById("new_itemCode").focus(); }, 200);
+          setTimeout(function () {document.getElementById("new_itemCode").focus();}, 200);
         }
 
         function closeAddItemModal() {
@@ -3527,12 +3543,12 @@
             received: document.getElementById("new_itemReceived").value.trim() || "0"   // ✅ จำนวน
           };
           if (!data.itemCode || !data.itemName) {
-            showModal({ title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Item Code และ Item Name", type: "error" });
+            showModal({title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Item Code และ Item Name", type: "error"});
             return;
           }
           var btn = document.getElementById("saveNewItemBtn");
           btn.innerText = "Saving..."; btn.disabled = true;
-          gasCall("addNewItem", { data: data }, function (res) {
+          gasCall("addNewItem", {data: data}, function (res) {
             closeAddItemModal();
             showModal({
               title: "เพิ่ม Item สำเร็จ",
@@ -3542,7 +3558,7 @@
             });
             btn.innerText = "บันทึก Item"; btn.disabled = false;
           }, function (err) {
-            showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+            showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
             btn.innerText = "บันทึก Item"; btn.disabled = false;
           });
         } 
@@ -3818,12 +3834,12 @@
             url += "&" + k + "=" + encodeURIComponent(typeof v === "object" ? JSON.stringify(v) : v);
           });
           fetch(url)
-            .then(function (res) { return res.json(); })
+            .then(function (res) {return res.json();})
             .then(function (data) {
-              if (data && data.error) { if (onFail) onFail({ message: data.message }); }
-              else { if (onSuccess) onSuccess(data); }
+              if (data && data.error) {if (onFail) onFail({message: data.message});}
+              else {if (onSuccess) onSuccess(data);}
             })
-            .catch(function (err) { if (onFail) onFail({ message: err.message }); });
+            .catch(function (err) {if (onFail) onFail({message: err.message});});
         }
 
         // ===== แทนที่ทุกฟังก์ชันที่เรียก google.script.run =====
@@ -3836,7 +3852,7 @@
               ? document.getElementById("in_itemCode").value.trim()
               : document.getElementById("in_itemName").value.trim();
             if (keyword.length < 3) return;
-            gasCall("searchItem", { keyword: keyword }, function (data) {
+            gasCall("searchItem", {keyword: keyword}, function (data) {
               var list = data.items;
               if (!list || list.length === 0) return;
               document.getElementById("in_itemCode").value = list[0].code;
@@ -3864,12 +3880,12 @@
             remark: document.getElementById("in_remark").value.trim()
           };
           if (!data.itemCode || !data.qty || Number(data.qty) <= 0) {
-            showModal({ title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Item Code และ Quantity", type: "error" });
+            showModal({title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Item Code และ Quantity", type: "error"});
             return;
           }
           var btn = document.getElementById("saveInputBtn");
           btn.innerText = "Saving..."; btn.disabled = true;
-          gasCall("saveStockIn", { data: data }, function (res) {
+          gasCall("saveStockIn", {data: data}, function (res) {
             var now = new Date();
             todayInputList.unshift(Object.assign({}, data, {
               time: res.time || now.toLocaleTimeString("th-TH"),
@@ -3877,10 +3893,10 @@
             }));
             renderInputTable();
             clearInputForm();
-            showModal({ title: "บันทึกสำเร็จ", text: "รับ " + data.itemName + " เข้าคลัง " + data.qty + " รายการแล้ว", type: "success", autoClose: 1800 });
+            showModal({title: "บันทึกสำเร็จ", text: "รับ " + data.itemName + " เข้าคลัง " + data.qty + " รายการแล้ว", type: "success", autoClose: 1800});
             btn.innerText = "บันทึกรับเข้า"; btn.disabled = false;
           }, function (err) {
-            showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+            showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
             btn.innerText = "บันทึกรับเข้า"; btn.disabled = false;
           });
         }
@@ -3890,8 +3906,8 @@
           clearTimeout(timer);
           timer = setTimeout(function () {
             var empId = document.getElementById("empId").value.trim();
-            if (!empId) { document.getElementById("empName").value = ""; return; }
-            gasCall("getEmployeeName", { empId: empId }, function (data) {
+            if (!empId) {document.getElementById("empName").value = ""; return;}
+            gasCall("getEmployeeName", {empId: empId}, function (data) {
               document.getElementById("empName").value = data.name || "";
             }, null);
           }, 300);
@@ -3906,7 +3922,7 @@
               : document.getElementById("itemName").value.trim();
             if (keyword.length < 3) return;
             lastKeyword = keyword;
-            gasCall("searchItem", { keyword: keyword }, function (data) {
+            gasCall("searchItem", {keyword: keyword}, function (data) {
               var list = data.items;
               if (keyword !== lastKeyword) return;
               if (!list || list.length === 0) return;
@@ -3924,60 +3940,60 @@
         }
 
         // --- Save Requisition ---
-          function saveData() {
-            var data = {
-              empId: document.getElementById('empId').value.trim(),
-              empName: document.getElementById('empName').value.trim(),
-              itemCode: document.getElementById('itemCode').value.trim(),
-              itemName: document.getElementById('itemName').value.trim(),
-              spec: document.getElementById('spec').value,
-              qty: document.getElementById('qty').value.trim(),
-              issuer: document.getElementById('issuer').value.trim(),
-              remark: document.getElementById('remark').value.trim()
-            };
-            if (!data.empId || !data.itemCode || !data.qty) {
-              showModal({ title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Employee ID, Item Code และ Quantity", type: "error" });
-              return;
-            }
-            var now = new Date();
-            data.date = now.toLocaleDateString("th-TH");
-            data.time = now.toLocaleTimeString("th-TH");
-            data.status = "รออนุมัติ";
+        function saveData() {
+          var data = {
+            empId: document.getElementById('empId').value.trim(),
+            empName: document.getElementById('empName').value.trim(),
+            itemCode: document.getElementById('itemCode').value.trim(),
+            itemName: document.getElementById('itemName').value.trim(),
+            spec: document.getElementById('spec').value,
+            qty: document.getElementById('qty').value.trim(),
+            issuer: document.getElementById('issuer').value.trim(),
+            remark: document.getElementById('remark').value.trim()
+          };
+          if (!data.empId || !data.itemCode || !data.qty) {
+            showModal({title: "ข้อมูลไม่ครบ", text: "กรุณากรอก Employee ID, Item Code และ Quantity", type: "error"});
+            return;
+          }
+          var now = new Date();
+          data.date = now.toLocaleDateString("th-TH");
+          data.time = now.toLocaleTimeString("th-TH");
+          data.status = "รออนุมัติ";
 
-            var btn = document.getElementById("saveBtn");
-            var label = document.getElementById("saveBtnLabel");
-            var progress = document.getElementById("saveBtnProgress");
+          var btn = document.getElementById("saveBtn");
+          var label = document.getElementById("saveBtnLabel");
+          var progress = document.getElementById("saveBtnProgress");
 
-            btn.disabled = true;
-            label.innerText = "Saving...";
-            progress.style.width = "0%";
+          btn.disabled = true;
+          label.innerText = "Saving...";
+          progress.style.width = "0%";
 
-            var pct = 0;
-            var progressTimer = setInterval(function () {
-              pct += (100 - pct) * 0.1;
-              progress.style.width = Math.min(pct, 92) + "%";
-            }, 150);
+          var pct = 0;
+          var progressTimer = setInterval(function () {
+            pct += (100 - pct) * 0.1;
+            progress.style.width = Math.min(pct, 92) + "%";
+          }, 150);
 
-            gasCall("saveStock", { data: data }, function () {
-              clearInterval(progressTimer);
-              progress.style.width = "100%";
-              setTimeout(function () {
-                progress.style.width = "0%";
-                label.innerText = "Save Transaction";
-                btn.disabled = false;
-              }, 300);
-
-              lastSavedData = data;
-              showSuccessModal();
-              clearForm();
-            }, function (err) {
-              clearInterval(progressTimer);
+          gasCall("saveStock", {data: data}, function () {
+            clearInterval(progressTimer);
+            progress.style.width = "100%";
+            setTimeout(function () {
               progress.style.width = "0%";
               label.innerText = "Save Transaction";
               btn.disabled = false;
-              showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
-            });
-          }
+            }, 300);
+
+            lastSavedData = data;
+            showSuccessModal();
+            clearForm();
+          }, function (err) {
+            clearInterval(progressTimer);
+            progress.style.width = "0%";
+            label.innerText = "Save Transaction";
+            btn.disabled = false;
+            showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
+          });
+        }
 
         // ================= HISTORY =================
 
@@ -4015,7 +4031,7 @@
           // check admin
           var email = localStorage.getItem("pmn_user_email") || "";
           var empId = document.getElementById("empId") ? document.getElementById("empId").value.trim() : "";
-          var isAdmin = HISTORY_ADMIN.map(function (e) { return e.toLowerCase(); }).includes(email.toLowerCase());
+          var isAdmin = HISTORY_ADMIN.map(function (e) {return e.toLowerCase();}).includes(email.toLowerCase());
 
           if (isAdmin) {
             document.getElementById("h_adminSearch").classList.remove("hidden");
@@ -4050,7 +4066,7 @@
 
         function loadHistory() {
           var email = localStorage.getItem("pmn_user_email") || "";
-          var isAdmin = HISTORY_ADMIN.map(function (e) { return e.toLowerCase(); }).includes(email.toLowerCase());
+          var isAdmin = HISTORY_ADMIN.map(function (e) {return e.toLowerCase();}).includes(email.toLowerCase());
 
           // ✅ แก้ตรงนี้ — ใช้ email เต็มๆ แทน email.split("@")[0]
           var empFilter = isAdmin ? (document.getElementById("h_empFilter").value.trim() || "ALL") : email;
@@ -4061,7 +4077,7 @@
           if (period === 'month') dateVal = document.getElementById("h_dateMonth").value;
           if (period === 'year') dateVal = document.getElementById("h_dateYear").value;
 
-          if (!dateVal) { showModal({ title: "แจ้งเตือน", text: "กรุณาเลือกวันที่", type: "error" }); return; }
+          if (!dateVal) {showModal({title: "แจ้งเตือน", text: "กรุณาเลือกวันที่", type: "error"}); return;}
 
           document.getElementById("h_tableBody").innerHTML =
             '<tr><td colspan="8" class="py-6 text-center text-xs" style="color:#8896a9;">กำลังโหลด...</td></tr>';
@@ -4073,18 +4089,18 @@
             empFilter: empFilter,
             isAdmin: isAdmin ? "1" : "0"
           }, function (res) {
-            if (!res.rows) { showModal({ title: "เกิดข้อผิดพลาด", text: "ไม่สามารถโหลดข้อมูลได้", type: "error" }); return; }
+            if (!res.rows) {showModal({title: "เกิดข้อผิดพลาด", text: "ไม่สามารถโหลดข้อมูลได้", type: "error"}); return;}
             renderHistoryTable(res.rows);
           }, function (err) {
-            showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+            showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
           });
         }
 
         function renderHistoryTable(rows) {
           document.getElementById("h_countBadge").innerText = rows.length + " รายการ";
           document.getElementById("h_totalCount").innerText = rows.length;
-          document.getElementById("h_approvedCount").innerText = rows.filter(function (r) { return r.status === "อนุมัติแล้ว"; }).length;
-          document.getElementById("h_pendingCount").innerText = rows.filter(function (r) { return r.status === "รออนุมัติ"; }).length;
+          document.getElementById("h_approvedCount").innerText = rows.filter(function (r) {return r.status === "อนุมัติแล้ว";}).length;
+          document.getElementById("h_pendingCount").innerText = rows.filter(function (r) {return r.status === "รออนุมัติ";}).length;
 
           if (rows.length === 0) {
             document.getElementById("h_tableBody").innerHTML =
@@ -4094,8 +4110,8 @@
 
           document.getElementById("h_tableBody").innerHTML = rows.map(function (r) {
             var bg = "#fffbf0", color = "#856404";
-            if (r.status === "อนุมัติแล้ว") { bg = "#e8f5ee"; color = "#198754"; }
-            if (r.status === "ไม่อนุมัติ") { bg = "#fdecea"; color = "#dc3545"; }
+            if (r.status === "อนุมัติแล้ว") {bg = "#e8f5ee"; color = "#198754";}
+            if (r.status === "ไม่อนุมัติ") {bg = "#fdecea"; color = "#dc3545";}
             return '<tr style="border-top:1px solid #eef0f3;" onmouseover="this.style.background=\'#f8f9fb\'" onmouseout="this.style.background=\'transparent\'">'
               + '<td class="py-2 px-3" style="color:#8896a9;font-size:12px;">' + r.id + '</td>'
               + '<td class="py-2 px-3" style="color:#1a2332;font-weight:500;">' + r.empName + ' <span style="color:#8896a9;font-size:11px;">(' + r.empId + ')</span></td>'
@@ -4127,7 +4143,7 @@
             searchToolItem();
           }
 
-          gasCall("getToolUserRole", { email: email }, function (res) {
+          gasCall("getToolUserRole", {email: email}, function (res) {
             // ✅ รองรับ role หลายค่า เช่น "Admin Developer"
             var role = (res && res.role ? String(res.role) : "").toLowerCase();
             toolIsAdmin = role.indexOf("admin") > -1;
@@ -4184,7 +4200,7 @@
           toolTimer = setTimeout(function () {
             var keyword = document.getElementById("tool_itemName").value.trim();
             if (keyword.length < 2) return;
-            gasCall("searchToolItem", { keyword: keyword }, function (res) {
+            gasCall("searchToolItem", {keyword: keyword}, function (res) {
               if (!res.items || res.items.length === 0) return;
               var spec = document.getElementById("tool_spec");
               spec.innerHTML = "";
@@ -4244,29 +4260,29 @@
           var remark = document.getElementById("tool_remark").value.trim();
 
           if (!itemName || !qty || qty <= 0) {
-            showModal({ title: "ข้อมูลไม่ครบ", text: "กรุณากรอกชื่อเครื่องมือและจำนวน", type: "error" }); return;
+            showModal({title: "ข้อมูลไม่ครบ", text: "กรุณากรอกชื่อเครื่องมือและจำนวน", type: "error"}); return;
           }
 
           // ✅ เช็ค balance ก่อนบันทึก
           if (bal <= 0) {
-            showModal({ title: "ไม่สามารถยืมได้", text: "ขณะนี้มีคนกำลังยืมอยู่ ไม่มีในคลัง", type: "error" }); return;
+            showModal({title: "ไม่สามารถยืมได้", text: "ขณะนี้มีคนกำลังยืมอยู่ ไม่มีในคลัง", type: "error"}); return;
           }
           if (qty > bal) {
-            showModal({ title: "จำนวนเกิน", text: "คงเหลือในคลังมีเพียง " + bal + " ชิ้น", type: "error" }); return;
+            showModal({title: "จำนวนเกิน", text: "คงเหลือในคลังมีเพียง " + bal + " ชิ้น", type: "error"}); return;
           }
 
-          gasCall("saveToolBorrow", { data: JSON.stringify({ itemName, spec: spec.value, qty, borrower, remark }) }, function (res) {
-            showModal({ title: "ยืมสำเร็จ", text: "รายการยืมถูกส่งรออนุมัติแล้ว", type: "success", autoClose: 1800 });
+          gasCall("saveToolBorrow", {data: JSON.stringify({itemName, spec: spec.value, qty, borrower, remark})}, function (res) {
+            showModal({title: "ยืมสำเร็จ", text: "รายการยืมถูกส่งรออนุมัติแล้ว", type: "success", autoClose: 1800});
             clearToolForm();
             loadMyToolBorrows();
           }, function (err) {
-            showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+            showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
           });
         }
 
         function loadMyToolBorrows() {
           var email = localStorage.getItem("pmn_user_email") || "";
-          gasCall("getMyToolBorrows", { email: email }, function (res) {
+          gasCall("getMyToolBorrows", {email: email}, function (res) {
             var rows = res.rows || [];
             document.getElementById("myToolBadge").innerText = rows.length + " รายการ";
             if (rows.length === 0) {
@@ -4322,7 +4338,7 @@
             }
             document.getElementById("toolApproveTable").innerHTML = rows.map(function (r) {
               var bg = "#fffbf0", color = "#856404";
-              if (r.status === "อนุมัติแล้ว") { bg = "#e8f5ee"; color = "#198754"; }
+              if (r.status === "อนุมัติแล้ว") {bg = "#e8f5ee"; color = "#198754";}
               return '<tr style="border-top:1px solid #eef0f3;">'
                 + '<td class="py-2 px-3" style="font-size:11px;color:#8896a9;">' + r.id + '</td>'
                 + '<td class="py-2 px-3" style="color:#1a2332;">' + r.borrowerName + '</td>'
@@ -4387,16 +4403,16 @@
 
               // ✅ แสดง loading ทันที
               var btn = document.querySelector('[onclick="approveTool(\'' + id + '\')"]');
-              if (btn) { btn.disabled = true; btn.innerText = "..."; }
+              if (btn) {btn.disabled = true; btn.innerText = "...";}
 
-              gasCall("approveToolBorrow", { txId: id, approverEmail: email }, function (res) {
-                showModal({ title: "อนุมัติสำเร็จ", text: "รายการได้รับการอนุมัติแล้ว", type: "success", autoClose: 1500 });
+              gasCall("approveToolBorrow", {txId: id, approverEmail: email}, function (res) {
+                showModal({title: "อนุมัติสำเร็จ", text: "รายการได้รับการอนุมัติแล้ว", type: "success", autoClose: 1500});
 
                 // ✅ โหลดแค่ approve list ก่อน แล้วค่อย load status ทีหลัง
                 loadToolApproveList();
-                setTimeout(function () { loadToolStatus(); }, 1000);
+                setTimeout(function () {loadToolStatus();}, 1000);
               }, function (err) {
-                showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+                showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
               });
             }
           });
@@ -4408,11 +4424,11 @@
             title: "ไม่อนุมัติ", text: "กรุณาระบุเหตุผล", type: "confirm", showInput: true,
             onConfirm: function (reason) {
               closeModal();
-              gasCall("rejectToolBorrow", { txId: id, reason: reason, approverEmail: email }, function (res) {
-                showModal({ title: "ไม่อนุมัติสำเร็จ", text: "รายการถูกปฏิเสธแล้ว", type: "error", autoClose: 1500 });
+              gasCall("rejectToolBorrow", {txId: id, reason: reason, approverEmail: email}, function (res) {
+                showModal({title: "ไม่อนุมัติสำเร็จ", text: "รายการถูกปฏิเสธแล้ว", type: "error", autoClose: 1500});
                 loadToolApproveList();
               }, function (err) {
-                showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+                showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
               });
             }
           });
@@ -4424,12 +4440,12 @@
             title: "คืนเครื่องมือ", text: "ต้องการคืนเครื่องมือรายการนี้ใช่ไหม?", type: "confirm",
             onConfirm: function () {
               closeModal();
-              gasCall("returnToolBorrow", { txId: id, returnerEmail: email }, function (res) {
-                showModal({ title: "คืนสำเร็จ", text: "บันทึกการคืนเรียบร้อยแล้ว", type: "success", autoClose: 1500 });
+              gasCall("returnToolBorrow", {txId: id, returnerEmail: email}, function (res) {
+                showModal({title: "คืนสำเร็จ", text: "บันทึกการคืนเรียบร้อยแล้ว", type: "success", autoClose: 1500});
                 loadMyToolBorrows();
                 loadToolStatus();
               }, function (err) {
-                showModal({ title: "เกิดข้อผิดพลาด", text: err.message, type: "error" });
+                showModal({title: "เกิดข้อผิดพลาด", text: err.message, type: "error"});
               });
             }
           });
@@ -4490,13 +4506,13 @@
           };
           if (Notification.permission === "granted") doNotify();
           else if (Notification.permission !== "denied")
-            Notification.requestPermission().then(function (p) { if (p === "granted") doNotify(); });
+            Notification.requestPermission().then(function (p) {if (p === "granted") doNotify();});
         }
 
         function handleGoogleLogin(response) {
           var base64Url = response.credential.split('.')[1];
           var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-          while (base64.length % 4) { base64 += '='; }
+          while (base64.length % 4) {base64 += '=';}
           var payload = JSON.parse(decodeURIComponent(escape(atob(base64))));
           var email = payload.email;
           var name = payload.name;
@@ -4602,7 +4618,7 @@
             return;
           }
 
-          var allowed = MANUAL_LOGIN_ALLOW.map(function (e) { return e.toLowerCase().trim(); });
+          var allowed = MANUAL_LOGIN_ALLOW.map(function (e) {return e.toLowerCase().trim();});
           if (!allowed.includes(email)) {
             errEl.textContent = "อีเมลนี้ไม่ได้รับอนุญาตให้เข้าด้วยวิธีนี้";
             errEl.style.display = "block";
